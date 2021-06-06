@@ -1,0 +1,126 @@
+.card {
+     /* Add shadows to create the "card" effect */
+     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+     transition: 0.3s;
+     
+     margin: auto;
+     /* margin: 150px; */
+     margin-top: 150px;
+     height: 460px;
+     width: 600px;
+
+
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: repeat(auto-fit, 1fr);
+     grid-template-areas: 
+     "box1 box1"
+     "box2 box3"
+     ;
+   }
+
+   .first-box{
+     padding-left: 50px;   
+     grid-area: box1;
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     flex-direction: column;
+
+   }
+   .first-box h1{
+     color: hsl(179, 62%, 43%);
+   }
+   .first-box h3{
+     color: hsl(71, 73%, 54%);
+   }
+   .first-box p{
+     color: hsl(218, 22%, 67%);
+   }
+
+
+   .second-box{
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     flex-direction: column;
+     grid-area: box2;
+     padding-left: 50px;
+     background-color: hsl(179, 62%, 43%);
+     color: white;
+     
+   }
+   .second-box p{
+     margin-top: -10px;
+     margin-bottom: 20px;
+   }
+   .second-box h1 .month{
+     margin-top: -20px;
+   }
+   .month{
+     font-size: 16px;
+     color: rgba(211, 211, 211, 0.705);
+     
+   }
+
+   button{
+     display: block;
+     padding: 10px 70px;
+     background-color: hsl(71, 73%, 54%);
+     cursor: pointer;
+     border: none;
+     margin-bottom: 20px;
+     box-shadow:  0 4px 8px 0 rgba(0,0,0,0.2);
+     font-size: 16px;
+     color: white;
+     border-radius: 5px;
+   }
+
+
+   .third-box{
+      grid-area: box3;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      padding-left: 50px;
+      background-color: hsla(179, 72%, 42%, 0.788);
+      color: white;
+
+   }
+   .third-box h3{
+     margin-top: -0px;
+   }
+   .third-box p{
+     color: lightgoldenrodyellow;
+   }
+   
+
+
+
+
+
+
+   /* On mouse-over, add a deeper shadow */
+   .card:hover {
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+   }
+   
+   /* Add some padding inside the card container */
+   .container {
+     padding: 2px 16px;
+   }
+
+
+
+
+  @media only screen and (max-width: 800px){
+    .card{
+      display: block;
+      height: auto;
+      width: auto;
+      padding: 10px;
+      padding-top: 0;
+      
+    }
+  }
